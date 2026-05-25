@@ -30,9 +30,9 @@ export default function Header() {
 
   return (
     <header className="shadow sticky z-50 top-0">
-      <nav className="bg-gray-900 border-b border-gray-700 px-4 md:px-6 py-2.5">
+      <nav className="bg-[var(--bg-card)] border-b border-[var(--border)] px-4 md:px-6 py-2.5">
         <div className="flex justify-between items-center mx-auto">
-          <Link to="/" className="flex items-center text-white font-bold text-lg tracking-tight">
+          <Link to="/" className="flex items-center font-bold text-lg tracking-tight text-[var(--text-h)]">
              {user ? user.name : "Dubeyjags"}
           </Link>
 
@@ -43,7 +43,7 @@ export default function Header() {
                 <NavLink
                   to={to}
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 hover:text-violet-400 lg:p-0 ${isActive ? "text-violet-400" : "text-gray-400"}`
+                    `block py-2 pr-4 pl-3 duration-200 hover:text-[var(--accent-hover)] lg:p-0 ${isActive ? "text-[var(--accent)]" : "text-gray-400"}`
                   }
                 >
                   {label}
@@ -55,14 +55,14 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="text-lg px-2 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-white transition"
+              className="text-lg px-2 py-1 rounded-full bg-[var(--bg)] text-white transition"
               aria-label="Toggle theme"
             >
               {!isDark ? "☀️" : "🌙"}
             </button>
             <Link
               to="/github"
-              className="hidden md:inline-block text-sm px-4 py-1.5 rounded-full bg-violet-600 hover:bg-violet-500 text-white font-medium transition"
+              className="hidden md:inline-block text-sm px-4 py-1.5 rounded-full bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-medium transition"
             >
               GitHub
             </Link>
