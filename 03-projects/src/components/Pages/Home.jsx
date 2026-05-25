@@ -70,14 +70,13 @@ const projects = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[var(--bg)] px-4 py-16">
-      {/* Hero */}
+    <div className="bg-[var(--bg)] px-4 py-auto">
       <div className="text-center mb-14">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-[var(--text-h)] tracking-tight mb-3">
-          React Mini Projects
+          React Projects
         </h1>
         <p className="text-[var(--text)] text-base sm:text-lg max-w-xl mx-auto">
-          A collection of small, focused React apps built to practise useState, useContext, custom hooks, React Router loaders, and localStorage — all styled with Tailwind CSS.
+          React apps built to practise useState, useContext, custom hooks, React Router loaders, and localStorage — all styled with Tailwind CSS.
         </p>
       </div>
 

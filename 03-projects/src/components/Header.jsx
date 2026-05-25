@@ -72,9 +72,9 @@ export default function Header() {
               className="lg:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
               aria-label="Toggle menu"
             >
-              <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-              <span className={`block w-6 h-0.5 bg-white transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-              <span className={`block w-6 h-0.5 bg-white transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-[var(--text-h)] transition-transform duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-[var(--text-h)] transition-opacity duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+              <span className={`block w-6 h-0.5 bg-[var(--text-h)] transition-transform duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
             </button>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Header() {
                   to={to}
                   onClick={() => setMenuOpen(false)}
                   className={({ isActive }) =>
-                    `block py-2 px-3 duration-200 border-b border-gray-700 hover:text-violet-400 ${isActive ? "text-violet-400" : "text-gray-400"}`
+                    `block py-2 px-3 duration-200 border-b border-[var(--border)] hover:text-[var(--accent-hover)] ${isActive ? "text-[var(--accent-hover)]" : "text-gray-400"}`
                   }
                 >
                   {label}
@@ -99,7 +99,7 @@ export default function Header() {
               <Link
                 to="/github"
                 onClick={() => setMenuOpen(false)}
-                className="block py-2 px-3 text-gray-400 hover:text-violet-400 duration-200"
+                className="block py-2 px-3 text-gray-400 hover:text-[var(--accent-hover)] duration-200"
               >
                 GitHub
               </Link>

@@ -16,7 +16,7 @@ const Github = () => {
     const joinYear = new Date(data.created_at).getFullYear()
 
     return (
-        <div className="min-h-screen bg-[var(--bg)] flex items-center justify-center p-6">
+        <>
             <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl w-full max-w-sm shadow-2xl overflow-hidden">
 
                 {/* Banner */}
@@ -97,7 +97,7 @@ const Github = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

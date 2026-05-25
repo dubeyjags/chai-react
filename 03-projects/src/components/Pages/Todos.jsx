@@ -30,7 +30,7 @@ const Todos = () => {
 
   return (
     <TodoProvider value={{ todos, add, update, remove, toggle }}>
-      <div className="bg-[var(--bg)] min-h-screen py-8">
+      <div className="bg-[var(--bg)] w-500 py-8 self-baseline">
         <div className="w-full max-w-2xl mx-auto bg-[var(--bg-card)] shadow-md rounded-lg px-4 py-3 text-[var(--text-h)]">
           <h1 className="text-2xl font-bold text-center mb-8 mt-2">
             Manage Your Todos

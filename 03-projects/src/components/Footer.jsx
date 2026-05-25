@@ -3,46 +3,59 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 border-t border-gray-700">
-            <div className="mx-auto w-full max-w-screen-xl px-4 py-6 lg:py-8">
-                <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-gray-400 sm:text-center">
+        <footer className="bg-[var(--bg-card)] border-t border-[var(--border)]">
+            <div className=" flex flex-col justify-between max-w-screen-xl p-2 px-4 mx-auto lg:flex-row">
+                    <span className="text-sm text-gray-400 text-center">
                         © 2026{" "}
-                        <a href="https://hiteshchoudhary.com/" className="text-violet-400 hover:underline">
+                        <a href="https://dubeyjags.cloud/" target="_blank" className="text-[var(--accent)] hover:underline">
                             dubeyjags
                         </a>
                         . All Rights Reserved.
                     </span>
-                    <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-                        <Link to="#" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
+                    <div className="flex mt-4 space-x-5 justify-center lg:mt-0">
+                        <Link to="tel:9971480240" target="_blank" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 8 19"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth={2}
                             >
                                 <path
-                                    fillRule="evenodd"
-                                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                                    clipRule="evenodd"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                                 />
                             </svg>
-                            <span className="sr-only">Facebook page</span>
+                            <span className="sr-only">Phone call</span>
                         </Link>
-                        <Link to="#" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
+                        <Link to="https://wa.me/9971480240" target="_blank" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="currentColor"
-                                viewBox="0 0 21 16"
+                                viewBox="0 0 24 24"
                             >
-                                <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                             </svg>
-                            <span className="sr-only">Discord community</span>
+                            <span className="sr-only">WhatsApp</span>
                         </Link>
-                        <Link to="#" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
+                        <Link to="mailto:dubeyjags@gmail.com" target="_blank" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
+                            <svg
+                                className="w-4 h-4"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+                            </svg>
+                            <span className="sr-only">Send email</span>
+                        </Link>
+                        <Link to="https://x.com/dubeyjags" target="_blank" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -58,7 +71,7 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">Twitter page</span>
                         </Link>
-                        <Link to="#" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
+                        <Link to="https://github.com/dubeyjags" target="_blank" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
@@ -74,24 +87,8 @@ export default function Footer() {
                             </svg>
                             <span className="sr-only">GitHub account</span>
                         </Link>
-                        <Link to="#" className="text-gray-400 hover:text-violet-400 transition-colors duration-200">
-                            <svg
-                                className="w-4 h-4"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
-                                    clipRule="evenodd"
-                                />
-                            </svg>
-                            <span className="sr-only">Dribbble account</span>
-                        </Link>
+                        
                     </div>
-                </div>
             </div>
         </footer>
     );

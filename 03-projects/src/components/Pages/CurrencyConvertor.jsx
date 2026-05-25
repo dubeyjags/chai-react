@@ -25,7 +25,7 @@ const CurrencyConvertor = () => {
   };
 
   return (
-    <div className="w-full h-screen flex justify-center items-center bg-[var(--bg)] text-[var(--text-h)]">
+    <>
       <div className="w-full max-w-md mx-4 relative">
         {/* heading */}
         <div className="text-center mb-6">
@@ -94,7 +94,7 @@ const CurrencyConvertor = () => {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

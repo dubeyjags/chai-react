@@ -32,7 +32,7 @@ const PasswordGenerator = () => {
   }, [password]);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-[var(--bg)]">
+    <>
       <div className="bg-[var(--bg-card)] border border-[var(--border)] shadow-2xl rounded-2xl p-8 w-[520px]">
         {/* Header */}
         <div className="mb-6 text-center">
@@ -136,7 +136,7 @@ const PasswordGenerator = () => {
           Generate New Password
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
