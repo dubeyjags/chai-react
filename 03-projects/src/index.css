@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --bg:         #1d293d;
+  --bg-card:    #243047;
+  --text:       #99a1af;
+  --text-h:     #ffffff;
+  --accent:     #6366f1;
+  --accent-hover: #818cf8;
+  --border:     rgba(0, 0, 0, 0.12);
+}
+
+.light {
+  --bg:         #f0f4f8;
+  --bg-card:    #ffffff;
+  --text:       #4b5563;
+  --text-h:     #111827;
+  --accent:     #e58046;
+  --accent-hover: #e19366;
+  --border:     rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,223 @@
+/* ============================================================
+   DESIGN TOKENS — edit here to control the entire project
+   ============================================================ */
+:root {
+
+  /* ----------------------------------------------------------
+     Tailwind color palette (raw tokens)
+     ---------------------------------------------------------- */
+
+  /* Grays */
+  --tw-gray-950:   #030712;
+  --tw-gray-900:   #111827;
+  --tw-gray-800:   #1f2937;
+  --tw-gray-700:   #374151;
+  --tw-gray-600:   #4b5563;
+  --tw-gray-400:   #9ca3af;
+  --tw-gray-300:   #d1d5db;
+  --tw-slate-800:  #1e293b;
+
+  /* Violet */
+  --tw-violet-400: #a78bfa;
+  --tw-violet-500: #8b5cf6;
+  --tw-violet-600: #7c3aed;
+
+  /* Indigo */
+  --tw-indigo-400: #818cf8;
+  --tw-indigo-500: #6366f1;
+  --tw-indigo-600: #4f46e5;
+  --tw-indigo-900: #312e81;
+
+  /* Blue / Cyan */
+  --tw-blue-500:   #3b82f6;
+  --tw-blue-600:   #2563eb;
+  --tw-cyan-500:   #06b6d4;
+
+  /* Pink / Rose */
+  --tw-pink-500:   #ec4899;
+  --tw-rose-500:   #f43f5e;
+
+  /* Green */
+  --tw-green-400:  #4ade80;
+
+  /* Neutral */
+  --tw-neutral-50:  #fafafa;
+  --tw-neutral-800: #262626;
+  --tw-neutral-900: #171717;
+
+  /* White / Black */
+  --tw-white: #ffffff;
+  --tw-black: #000000;
+
+  /* ----------------------------------------------------------
+     Semantic theme tokens — these are what components should use
+     ---------------------------------------------------------- */
+
+  /* Backgrounds */
+  --bg:             var(--tw-gray-900);
+  --bg-secondary:   var(--tw-gray-800);
+  --bg-tertiary:    var(--tw-gray-950);
+  --bg-glass:       rgba(255, 255, 255, 0.08);
+
+  /* Text */
+  --fg:             rgba(255, 255, 255, 0.87);
+  --fg-muted:       var(--tw-gray-400);
+  --fg-subtle:      var(--tw-gray-300);
+  --text-h:         var(--tw-white);  /* heading color — matches Todos theme token */
+  --text:           var(--fg-muted);
+
+  /* Primary accent (violet) */
+  --primary:        var(--tw-violet-500);
+  --primary-light:  var(--tw-violet-400);
+  --primary-dark:   var(--tw-violet-600);
+
+  /* Secondary accent (indigo) */
+  --secondary:      var(--tw-indigo-500);
+  --secondary-light:var(--tw-indigo-400);
+  --secondary-dark: var(--tw-indigo-600);
+
+  /* Borders */
+  --border:         var(--tw-gray-700);
+  --border-light:   var(--tw-gray-600);
+  --border-glass:   rgba(255, 255, 255, 0.15);
+
+  /* Links */
+  --link:           var(--tw-indigo-500);
+  --link-hover:     var(--tw-violet-400);
+
+  /* Buttons */
+  --btn-bg:         var(--tw-neutral-900);
+  --btn-primary-bg: var(--tw-violet-600);
+  --btn-primary-hover: var(--tw-violet-500);
+
+  /* Status */
+  --success:        var(--tw-green-400);
+
+  /* Gradients */
+  --gradient-page:    linear-gradient(135deg, var(--tw-gray-900) 0%, var(--tw-slate-800) 50%, var(--tw-gray-900) 100%);
+  --gradient-primary: linear-gradient(90deg, var(--tw-violet-600), var(--tw-blue-600));
+  --gradient-accent:  linear-gradient(90deg, var(--tw-pink-500), var(--tw-rose-500));
+  --gradient-cool:    linear-gradient(90deg, var(--tw-indigo-500), var(--tw-violet-500));
+  --gradient-hero:    linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%);
+
+  /* ----------------------------------------------------------
+     Typography
+     ---------------------------------------------------------- */
+  --font-sans:    Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono:    ui-monospace, Consolas, "Cascadia Code", monospace;
+  --font-heading: var(--font-sans);
+
+  --text-base:    1rem;
+  --text-lg:      1.125rem;
+  --text-xl:      1.25rem;
+  --text-h1:      3.2em;
+  --leading:      1.5;
+  --leading-tight:1.1;
+
+  /* ----------------------------------------------------------
+     Spacing & layout
+     ---------------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ----------------------------------------------------------
+     Effects
+     ---------------------------------------------------------- */
+  --shadow-sm:  0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow:     0 4px 6px  rgba(0, 0, 0, 0.4);
+  --shadow-lg:  0 10px 15px rgba(0, 0, 0, 0.5);
+  --shadow-xl:  0 20px 40px rgba(0, 0, 0, 0.6);
+
+  --blur-glass: blur(20px);
+
+  --transition-fast:   150ms ease;
+  --transition:        250ms ease;
+  --transition-slow:   300ms ease;
+
+  /* ----------------------------------------------------------
+     Base application
+     ---------------------------------------------------------- */
+  font-family: var(--font-sans);
+  line-height: var(--leading);
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--fg);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   Light mode overrides
+   ============================================================ */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:           var(--tw-white);
+    --bg-secondary: var(--tw-neutral-50);
+    --bg-tertiary:  #f3f4f6;
+
+    --fg:           var(--tw-slate-800);
+    --fg-muted:     #4b5563;
+    --fg-subtle:    #374151;
+    --text-h:       var(--tw-gray-900);
+    --text:         var(--fg-muted);
+
+    --border:       #e5e7eb;
+    --border-light: #d1d5db;
+
+    --btn-bg:       var(--tw-neutral-50);
+
+    --link:         var(--tw-indigo-500);
+    --link-hover:   var(--tw-indigo-400);
+  }
+}
+
+/* ============================================================
+   Global element defaults
+   ============================================================ */
+a {
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: inherit;
+  transition: color var(--transition-fast);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: var(--text-h1);
+  line-height: var(--leading-tight);
+}
+
+button {
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: var(--text-base);
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--btn-bg);
+  cursor: pointer;
+  transition: border-color var(--transition), background-color var(--transition);
+}
+button:hover {
+  border-color: var(--primary);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
